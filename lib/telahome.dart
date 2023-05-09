@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:trabalhoevandrobarn/categorias.dart';
+import 'package:trabalhoevandrobarn/sobre.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -34,11 +36,11 @@ class InicialUsuarioPage extends StatelessWidget {
               Column(
                 children: [
                   SizedBox(
-                    height: 200,
-                    width: 150,
+                    height: 250,
+                    width: 200,
                     child: Positioned(
-                      top: 20,
-                      left: 0,
+                      top: 50,
+                      left: 50,
                       child: Image.asset('assets/images/livro_bia.png'),
                     ),
                   ),
@@ -52,24 +54,25 @@ class InicialUsuarioPage extends StatelessWidget {
                     child: Positioned(
                       bottom: 20,
                       right: 0,
-                      child: Image.asset('assets/images/livro_bia.png'),
+                      child:
+                          Image.asset('assets/images/assets/images/demon.png'),
                     ),
                   ),
                   SizedBox(
-                    height: 50,
-                    width: 50,
+                    height: 0,
+                    width: 60,
                   ),
                   SizedBox(
-                    height: 200,
-                    width: 150,
+                    height: 250,
+                    width: 200,
                     child: Positioned(
-                      top: 30,
-                      left: 0,
-                      child: Image.asset('assets/images/livro_bia.png'),
+                      bottom: 600,
+                      left: 500,
+                      child: Image.asset('assets/images/percy.png'),
                     ),
                   ),
                   SizedBox(
-                    height: 50,
+                    height: 500,
                     width: 50,
                   ),
                 ],
@@ -78,38 +81,38 @@ class InicialUsuarioPage extends StatelessWidget {
               Column(
                 children: [
                   SizedBox(
-                    height: 200,
-                    width: 150,
-                    child: Positioned(
-                      top: 10,
-                      left: 0,
-                      child: Image.asset('assets/images/livro_bia.png'),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 50,
-                    width: 50,
-                  ),
-                  SizedBox(
-                    height: 200,
-                    width: 150,
-                    child: Positioned(
-                      bottom: 20,
-                      right: 0,
-                      child: Image.asset('assets/images/livro_bia.png'),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 50,
-                    width: 50,
-                  ),
-                  SizedBox(
-                    height: 200,
-                    width: 150,
+                    height: 250,
+                    width: 200,
                     child: Positioned(
                       top: 30,
-                      left: 0,
-                      child: Image.asset('assets/images/livro_bia.png'),
+                      left: 70,
+                      child: Image.asset('assets/images/coroa_de_gelo.png'),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 50,
+                    width: 50,
+                  ), //victoria
+                  SizedBox(
+                    height: 250,
+                    width: 200,
+                    child: Positioned(
+                      bottom: 20,
+                      right: 50,
+                      child: Image.asset('assets/images/rainha_vermelha.png'),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 50,
+                    width: 50,
+                  ),
+                  SizedBox(
+                    height: 250,
+                    width: 200,
+                    child: Positioned(
+                      top: 50,
+                      left: 50,
+                      child: Image.asset('assets/images/trono_de_vidro.png'),
                     ),
                   ),
                 ],
@@ -118,38 +121,38 @@ class InicialUsuarioPage extends StatelessWidget {
               Column(
                 children: [
                   SizedBox(
-                    height: 200,
-                    width: 150,
+                    height: 250,
+                    width: 250,
                     child: Positioned(
-                      top: 10,
-                      left: 0,
-                      child: Image.asset('assets/images/livro_bia.png'),
+                      top: 50,
+                      left: 50,
+                      child: Image.asset('assets/images/witcher.png'),
                     ),
                   ),
                   SizedBox(
                     height: 50,
-                    width: 50,
+                    width: 100,
                   ),
                   SizedBox(
-                    height: 200,
-                    width: 150,
+                    height: 250,
+                    width: 250,
                     child: Positioned(
-                      bottom: 500,
-                      right: 500,
-                      child: Image.asset('assets/images/livro_bia.png'),
+                      top: 50,
+                      right: 50,
+                      child: Image.asset('assets/images/haikyu.png'),
                     ),
                   ),
                   SizedBox(
-                    height: 50,
-                    width: 50,
+                    height: 250,
+                    width: 200,
                   ),
                   SizedBox(
-                    height: 200,
-                    width: 150,
+                    height: 250,
+                    width: 200,
                     child: Positioned(
-                      top: 30,
-                      left: 0,
-                      child: Image.asset('assets/images/livro_bia.png'),
+                      top: 50,
+                      left: 50,
+                      child: Image.asset('assets/images/demon.png'),
                     ),
                   ),
                 ],
@@ -169,39 +172,41 @@ class InicialUsuarioPage extends StatelessWidget {
               child: Text('Drawer Header'),
             ),
             ListTile(
-              title: const Text('Categorianta'),
+                title: const Text('Categorias'),
+                onTap: () {
+                  onPressed:
+                  () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                const InicialUsuarioPage(title: 'Inicial')));
+                  };
+                }),
+            ListTile(
+              title: const Text('Conta'),
               onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
+                //daqui vai pra outra tela
                 Navigator.pop(context);
               },
             ),
             ListTile(
-              title: const Text('conta'),
+              title: const Text('Configuração'),
               onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              title: const Text('configuração'),
-              onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
+                //daqui vai pra outra tela
                 Navigator.pop(context);
               },
             ),
             ListTile(
               title: const Text('sobre'),
               onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
+                () {
+                  Navigator.pop(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              const InicialUsuarioPage(title: 'sobre')));
+                };
               },
             ),
           ],
